@@ -25,7 +25,6 @@ public class ProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         LOG.debug("LOG: GET");
         Writer writer = resp.getWriter();
-        int id = 1;
         writer.write(String.format("%-3s %-10s %s \n\n", "id", "title", "cost"));
         for (Product product : productList)
             writer.write(product + "\n");
